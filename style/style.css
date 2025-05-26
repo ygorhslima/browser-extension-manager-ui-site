@@ -31,7 +31,9 @@
 body{
     background: var(--light-gradient);
     height: 100vh;
+    margin: 30px auto 0px auto;
     font-family: var(--Noto-sans);
+    width: 70vw;
 }
 
 header{
@@ -39,7 +41,6 @@ header{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    margin: 30px;
     padding: 10px;
     border-radius: 20px;
 }
@@ -50,6 +51,7 @@ header{
     border-radius: 10px;
     cursor: pointer;
 }
+
 
 main .extensions-list-menu{
     display: flex;
@@ -97,4 +99,43 @@ main .extensions-list-menu .container-buttons-view > button.button-view:hover{
 .attribution > p > a:hover{
     text-decoration: underline;
     opacity: 0.8;
+}
+
+
+body.dark-mode {
+    background: var(--dark-gradient);
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: var(--Neutral700);
+}
+
+body.dark-mode .button-dark-light {
+    background-color: var(--Neutral600);
+    color: white;
+}
+
+body.dark-mode main .extensions-list-menu .container-buttons-view > button.button-view {
+    background-color: var(--Neutral600);
+    color: white;
+}
+
+body.dark-mode .extensions-list .box-item {
+    background-color: var(--Neutral700);
+    border: 1px solid var(--Neutral600);
+    color: white;
+}
+
+body.dark-mode .change-element .btn_remove {
+    background-color: var(--Neutral600);
+    color: white;
+}
+
+body.dark-mode .attribution {
+    background-color: var(--Neutral600);
+}
+
+body.dark-mode .attribution > p > a {
+    color: #9db5ff;
 }

@@ -5,18 +5,12 @@ let modoEscuro = false;
 
 /** Evento de clique responsável pela mudança de tema no site (dark ou light) */
 document.getElementById("button-dark-light").addEventListener("click", () => {
-  const icon = document.getElementById("img-icon-light-dark");
+  corpo.classList.toggle("dark-mode");
 
-  // Alterna entre modo escuro e claro
-  modoEscuro = !modoEscuro;
-
-  if (modoEscuro) {
-    modo_dark.disabled = false; // ativa CSS do modo escuro
-    icon.src = "./assets/images/icon-sun.svg"; // ícone de sol
-  } else {
-    modo_dark.disabled = true; // desativa CSS do modo escuro
-    icon.src = "./assets/images/icon-moon.svg"; // ícone de lua
-  }
+  const modoEscuroAtivo = corpo.classList.contains("dark-mode");
+  icon.src = modoEscuroAtivo 
+    ? "./assets/images/icon-sun.svg"
+    : "./assets/images/icon-moon.svg";
 });
 
 /** Eventos de clique responsáveis por mostrar:
