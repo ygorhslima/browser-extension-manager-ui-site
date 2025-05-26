@@ -30,7 +30,7 @@
 
 body{
     background: var(--light-gradient);
-    height: 100vh;
+    min-height: 100vh;
     margin: 30px auto 0px auto;
     font-family: var(--Noto-sans);
     width: 70vw;
